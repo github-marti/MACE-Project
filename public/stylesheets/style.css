@@ -2,3 +2,41 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#main-name{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  margin-left: 42%;
+  font-size: 50px;
+  color: teal;
+
+}
+
+#navbarBasicExample{
+  background-color: peachpuff;
+}
+
+#signup-container{
+  margin-left: 42%;
+ 
+}
+#sign-form{
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+  padding-top: 30px;
+}
+#email, #password{
+  font-family: 'Righteous', cursive;
+ 
+}
+.form-group{
+  padding-top: 10px;
+}
+#signbtn{
+  padding-top: 15px;
+}
+#err{
+  color: red;
+  font-size: 20px;
+}
+/* @media screen and (max-width: 480px) {} */
