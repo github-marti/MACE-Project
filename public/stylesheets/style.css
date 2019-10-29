@@ -1,3 +1,4 @@
+@media screen and (max-width: 480px) {
 form.signup,
 form.login {
   margin-top: 50px;
@@ -6,8 +7,8 @@ form.login {
 #main-name{
   font-family: 'Righteous', cursive;
   text-align: center;
-  margin-left: 42%;
-  font-size: 50px;
+  margin-left: 0px;
+  font-size: 40px;
   color: teal;
 
 }
@@ -20,7 +21,7 @@ form.login {
   margin-left: 42%;
  
 }
-#sign-form{
+.sign-form{
   font-family: 'Righteous', cursive;
   font-size: 30px;
   padding-top: 30px;
@@ -39,4 +40,22 @@ form.login {
   color: red;
   font-size: 20px;
 }
-/* @media screen and (max-width: 480px) {} */
+#welcome{
+text-align: center;
+  color: teal;
+  font-family:'Righteous', cursive; 
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.dropdown{
+  margin-left: 125px;
+  margin-top: 5px;
+}
+
+.input {
+  margin-left: 75px;
+  margin-top: 10px;
+  width: 200px;
+}
+}
