@@ -22,4 +22,16 @@ module.exports = function(app) {
             res.json(results);
         });
     });
+
+    app.delete("/vocab/:id/", function(req, res) {
+        db.Vocab.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(results => {
+            console.log(results);
+            res.end();
+        })
+    })
 };
