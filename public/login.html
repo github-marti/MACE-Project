@@ -30,70 +30,8 @@
                 </div>
             </div>
             <br>
-            <div class="dropdowns">
-            <div class="dropdown">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                        <span>I SPEAK</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="dropdown iWantToSpeak">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                        <span>I WANT TO SPEAK</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Language 1
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
             <br>
-            <br>
-            <br>
-            <br>
+            <br>>
             <div class="field">
                 <label class="label">Email-Address</label>
                 <div class="control">
@@ -110,23 +48,13 @@
             <div>
                 <button class="button is-rounded submitButton">Submit</button>
             </div>
+            <br>
             <div>
-                <button class="button is-rounded newUserButton">New User? Click Here</button>
+                <a class="button is-rounded newUserButton" href="signup.html">New User? Click Here</a>
             </div>
         </div>
     </section>
-    <script>
-        var dropdown = document.querySelector('.dropdown');
-dropdown.addEventListener('click', function(event) {
-  event.stopPropagation();
-  dropdown.classList.toggle('is-active');
-});
-var iWantToSpeakdropdown = document.querySelector('.iWantToSpeak');
-iWantToSpeakdropdown.addEventListener('click', function(event) {
-  event.stopPropagation();
-  iWantToSpeakdropdown.classList.toggle('is-active');
-});
-    </script>
+    
 
 </body>
 
