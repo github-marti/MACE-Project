@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("../img/communication.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card {    
+      top: 35px !important;
+      font-family: 'Satisfy', cursive;
+      background-color: peachpuff;
+      border-radius: 25px;
+      border: 3px solid gray;
+      padding: 20px; 
+      opacity: 0.9;
+    }
+
+    p {
+        color: darkslategray !important;
+    }
+
+.title {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: right;
+}
+
+.appName {
+    font-family: 'Righteous', cursive;
+    font-size: 4rem !important;
+    color: teal !important;
+    line-height: .5 !important;
+    opacity: 1;
+}
+
+.label {
+    color: white !important;
+    font-family: 'Righteous', cursive;
+    font-size: 1rem !important;
+}
+
+.submitButton {
+    font-family: 'Righteous', cursive;
+    color: teal !important;
+    margin-left: 110px;
+}
+
+.newUserButton {
+    font-family: 'Righteous', cursive;
+    color: teal !important;
+    margin-left: 60px;
+}
+
+.dropdowns {
+    margin-left: 25px;
+    position: relative;
+    top: 70px !important;
+}
+
