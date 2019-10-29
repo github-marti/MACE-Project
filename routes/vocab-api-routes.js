@@ -12,7 +12,8 @@ module.exports = function(app) {
     app.post("/vocab/:vocab/", function(req, res) {
         db.Vocab.create({
             word: req.params.vocab,
-            language: req.body.language
+            createdAt: new Date(),
+            updatedAt: new Date()
         })
         .then(results => {
             res.json(results);
