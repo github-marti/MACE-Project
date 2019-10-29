@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>From language</p>
+    <input id="fromLanguage">
+    <p>To language</p>
+    <p>es - spanish, fr - French, de - German, pt - portuguese</p>
+    <input id="toLanguage">
+    <p>Word</p>
+    <input id="word">
+    <br>
+    <button id="search">SEARCH</button>
+
+    <div id="translate">
+        <p>translate</p>
+    </div>
+    <div id="definition">
+        <p>definition</p>
+    </div>
+    <div id="expressions">
+        <p>expressions</p>
+    </div>
+    <input type="radio" name="lang" value="1">Spanish<br>
+    <input type="radio" name="lang" value="2">French<br>
+    <input type="radio" name="lang" value="3">German<br>
+    <button id="save-btn">Save</button>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#save-btn").on("click", function () {
+                // newWord must refer to the vocab word that the user wants to save
+                let newWord = $("#new-word").text();
+
+                // newLang must refer to the language the word is in
+                let newLang = parseInt($('input[name="lang"]:checked').val());
+
+                // newDifficulty must refer to the difficulty level the user chooses
+                let newDifficulty = $("#difficulty").val();
+
+                console.log(newWord, newLang);
+
+                let newVocab = {
+                    word: newWord,
+                    difficulty: newDifficulty,
+                    LanguageId: newLang,
+                    ListId: 1,
+                    UserId: 1
+                };
+
+                console.log(newVocab);
+
+                $.post(`http://localhost:8080/vocab/${newWord}`, newVocab, function (data) {
+                    console.log(data);
+                    console.log("Word successfully saved!");
+                });
+            });
+
+            $("#search").on("click", function () {
+                let fromLanguage = $("#fromLanguage").val();
+                let toLanguage = $("#toLanguage").val();
+                let wordSearch = $("#word").val();
+
+                $("#translate").html("");
+                $("#definition").html("");
+                $("#expressions").html("");
+
+                let queryURLTranslate = `https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=${fromLanguage}&target=${toLanguage}&input=${wordSearch}`;
+
+                $.ajax({
+                    url: queryURLTranslate,
+                    method: "GET",
+                    headers: {
+                        "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
+                        "x-rapidapi-key": "b98198b437mshea0ca9221f948fdp104f05jsneed7015c919a"
+                    }
+                }).then(function (response) {
+                    //console.log(response);
+                    //console.log(response.outputs[0].output);
+                    let newP = $("<p>");
+                    newP.attr('id', 'new-word');
+                    newP.text(response.outputs[0].output);
+                    $("#translate").append(newP);
+                });
+
+                let queryURLExpression = `https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/resources/dictionary/lookup?source=${fromLanguage}&target=${toLanguage}&input=${wordSearch}`;
+
+                $.ajax({
+                    url: queryURLExpression,
+                    method: "GET",
+                    headers: {
+                        "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
+                        "x-rapidapi-key": "b98198b437mshea0ca9221f948fdp104f05jsneed7015c919a"
+                    }
+                }).then(function (response) {
+                    console.log(response);
+                    //console.log(response.outputs[0].output.matches[0].targets[0].expressions.length);
+
+                    let totalNoOfExpressions = response.outputs[0].output.matches[0].targets[0].expressions.length;
+                    for (let i = 0; i < totalNoOfExpressions; i++) {
+                        // console.log(response.outputs[0].output.matches[0].targets[0].expressions[i].source);
+                        // console.log(response.outputs[0].output.matches[0].targets[0].expressions[i].target);
+                        //console.log(response);
+
+                        let newPSource = $("<p>");
+                        newPSource.text("FROM: " + response.outputs[0].output.matches[0].targets[0].expressions[i].source);
+                        let newPTarget = $("<p>");
+                        newPTarget.text("TO: " + response.outputs[0].output.matches[0].targets[0].expressions[i].target);
+                        $("#expressions").append(newPSource);
+                        $("#expressions").append(newPTarget);
+                    }
+
+                    // if()
+                    let totalNoOfDefinitions = response.outputs[0].output.matches[0].targets[0].invmeanings.length;
+
+                    for (let i = 0; i < totalNoOfDefinitions; i++) {
+                        let newDefinition = $("<p>");
+                        newDefinition.text("Definition: " + response.outputs[0].output.matches[0].targets[0].invmeanings[i]);
+                        $("#definition").append(newDefinition);
+                    }
+
+                })
+
+
+            })
+        })
+
+    </script>
+
+
+</body>
+
+</html>
