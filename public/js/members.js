@@ -8,6 +8,7 @@ $(document).ready(function() {
     $(".member-name").text(data.email);
     $(".member-name").attr("id", data.id);
   });
+  
 
 
   $(".dropdown-item").on("click", function(event){
