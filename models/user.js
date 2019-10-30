@@ -12,6 +12,17 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: {
+          args: [1, 10],
+          msg: "Username must be between 1 and 10 characters long."
+        }
+      }
+    },
     // The password cannot be null
     password: {
       type: DataTypes.STRING,
