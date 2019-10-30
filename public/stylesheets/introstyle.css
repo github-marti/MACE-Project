@@ -78,3 +78,28 @@ body, html {
     top: 70px !important;
 }
 
+@media only screen and (min-width: 700px) {
+    .submitButton {
+        margin-left: 275px;
+        margin-top: 50px;
+    }
+    
+    .newUserButton {
+        margin-left: 220px;
+    }
+
+    .card {    
+        margin-bottom: 50px;
+}
+    .appName {
+        font-size: 100px !important;
+    }
+
+    .quote {
+        font-size: 30px !important;
+    }
+
+    .author {
+        font-size: 30px !important;
+    }
+}
