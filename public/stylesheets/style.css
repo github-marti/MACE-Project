@@ -72,8 +72,17 @@ text-align: center;
   float: right;
   margin-right: 20px;
 }
+#login{
+  margin-left: 150px;
+}
 #result{
   text-align: center;
 }
-#translate, 
-} 
+i:hover {
+  
+  color: red;
+  cursor: pointer;
+  
+}
+
+}
