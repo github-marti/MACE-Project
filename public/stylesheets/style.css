@@ -68,4 +68,7 @@ text-align: center;
   outline:none;
   margin-top: 20px;
 }
+#logout{
+  float: right;
+}
 } 
