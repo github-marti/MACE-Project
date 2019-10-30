@@ -1,6 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
     const Vocab = sequelize.define("Vocab", {
-        word: {
+        nativeword: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                max: {
+                    args: [30],
+                    msg: "Word must be less than 30 characters long."
+                }
+            }
+        },
+        translatedword: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
