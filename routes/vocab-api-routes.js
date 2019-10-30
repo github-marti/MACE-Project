@@ -14,7 +14,7 @@ module.exports = function(app) {
             word: req.params.vocab,
             LanguageId: req.body.LanguageId,
             UserId: req.body.UserId,
-            ListId: req.body.ListId,
+            VocabListId: req.body.ListId,
             createdAt: new Date(),
             updatedAt: new Date()
         })
