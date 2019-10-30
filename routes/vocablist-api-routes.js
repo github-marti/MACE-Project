@@ -1,8 +1,8 @@
 var db = require("../models");
 
 module.exports = function(app) {
-    app.get("/api/lists", function(req, res) {
-        db.List.findAll({
+    app.get("/api/vocablists", function(req, res) {
+        db.VocabList.findAll({
             include: [
                 {
                     model: db.Vocab
@@ -10,13 +10,13 @@ module.exports = function(app) {
             ]
         })
         .then(results => {
-            console.log("lists sent", results[0].dataValues);
+            console.log("vocablists sent", results[0].dataValues);
             res.json(results);
         });
     });
 
-    app.post("/list/:list/", function(req, res) {
-        db.List.create({
+    app.post("/vocablist/:vocablist/", function(req, res) {
+        db.VocabList.create({
             name: req.params.list,
             createdAt: new Date(),
             updatedAt: new Date(),

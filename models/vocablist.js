@@ -1,16 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
-    const List = sequelize.define("List", {
+    const VocabList = sequelize.define("VocabList", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
     });
 
-    List.associate = function(models) {
-        List.hasMany(models.Vocab, {
+    VocabList.associate = function(models) {
+        VocabList.hasMany(models.Vocab, {
             onDelete: "cascade"
         });
     };
 
-  return List;
+  return VocabList;
 };
