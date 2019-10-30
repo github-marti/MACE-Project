@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         });
 
-        Vocab.belongsTo(models.List, {
+        Vocab.belongsTo(models.VocabList, {
             foreignKey: {
                 allowNull: false
             }

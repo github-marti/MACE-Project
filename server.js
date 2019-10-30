@@ -26,7 +26,7 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
 require("./routes/vocab-api-routes.js")(app);
-require("./routes/list-api-routes.js")(app);
+require("./routes/vocablist-api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ force: false }).then(function() {
