@@ -25,24 +25,32 @@
           <h5 id="main-name">Let's Talk</h5>
           <div class="navbar-end">
             <div class="navbar-item">
-              <!-- <div class="buttons">
-                <a class="button is-primary" href="login.html">
-                  <strong>Log out</strong>
-                </a>
-              </div> -->
             </div>
           </div>
+        
         </div>
       </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h1 id="welcome">Welcome<span class="member-name"></span></h1>
-        <h2 id="welcome">{{username}}</h2>
+          <div class="container-fluid">
+              <div class="navbar-header" id="logout">
+                <a class="navbar-brand" href="login.html">
+                  Logout
+                </a>
+              </div>
+            </div>
+        <h1 id="welcome">Welcome  <span class="member-username"></span></h1>
+        
       </div>
     </div>
     <div class="dropdown">
         <div class="dropdown-trigger">
+          <h5>
+            Spanish: es<br>
+            German: de<br>
+            French: fr
+          </h5>
             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
                 <span id="toLanguage">Pick a language</span>
                 <span class="icon is-small">
@@ -74,16 +82,6 @@
   <div id="expressions">
       <p>expressions</p>
   </div>
-   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
