@@ -62,6 +62,8 @@ body, html {
     font-family: 'Righteous', cursive;
     color: teal !important;
     margin-left: 110px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .newUserButton {
