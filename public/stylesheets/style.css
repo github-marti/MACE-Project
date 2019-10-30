@@ -70,5 +70,19 @@ text-align: center;
 }
 #logout{
   float: right;
+  margin-right: 20px;
 }
-} 
+#login{
+  margin-left: 150px;
+}
+#result{
+  text-align: center;
+}
+i:hover {
+  
+  color: red;
+  cursor: pointer;
+  
+}
+
+}
