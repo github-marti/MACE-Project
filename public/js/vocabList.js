@@ -8,8 +8,11 @@ $("#save-btn").on("click", function() {
     // newDifficulty must refer to the difficulty level the user chooses
     let newDifficulty = $("#difficulty").val();
 
+    let nativeWord = $("word").val();
+
     let newVocab = {
-        word: newWord,
+        nativeword: nativeWord,
+        translatedword : newWord,
         difficulty: newDifficulty,
         LanguageId: newLang
     };
