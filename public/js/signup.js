@@ -14,6 +14,8 @@ $(document).ready(function() {
       password: passwordInput.val().trim()
     };
 
+    console.log("userdata", userData);
+
     if (!userData.email || !userData.password || !userData.username) {
       return;
     }
@@ -27,6 +29,7 @@ $(document).ready(function() {
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(email, username, password) {
+    console.log(email, username, password)
     $.post("/api/signup", {
       email: email,
       username: username,
