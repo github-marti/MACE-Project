@@ -17,7 +17,7 @@
     }
     
     #navbarBasicExample{
-      background-color: peachpuff;
+      background-color: peachpuff !important;
     }
     
     .sign-form {
@@ -75,4 +75,181 @@ border-style: solid;
   border-color: rgb(161, 155, 155);
     box-shadow: 10px 10px 5px lightgray;
 }
+
+#login {
+  margin-left: 160px !important;
+}
+}
+
+@media only screen and (min-width: 768px) {
+  form.signup,
+  form.login {
+    margin-top: 50px;
+  }
+
+ 
+  #main-name{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px !important;
+    font-size: 60px;
+    color: teal;
+    text-shadow: 2px 2px white;
+  
+  }
+  
+  #navbarBasicExample{
+    background-color: peachpuff !important;
+  }
+  
+  .sign-form {
+  font-family: 'Righteous', cursive;
+    text-align: center;
+    margin-top: 75px;
+    font-size: 40px;
+    color: teal;
+  }
+
+#email, #username{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Righteous', cursive;
+  color: gray;
+}
+
+#email-input, #username-input {
+  width: 400px !important;
+  margin-left: 200px;
+margin-bottom: 30px;
+border-style: solid;
+border-width: 1px;
+border-color: gray;
+}
+
+#password {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Righteous', cursive;
+  color: gray
+}
+
+#password-input {
+  width: 400px;
+  margin-left: 200px;
+  margin-bottom: 70px;
+  border-style: solid;
+border-width: 1px;
+border-color:gray;
+
+}
+
+.button {
+  margin-left: 325px;
+  font-family: 'Righteous', cursive;
+  font-size: 30px !important;
+  color: teal;
+  background-color: peachpuff;
+  border-radius: 4px;
+  border-style: solid;
+border-width: 1px;
+border-color: rgb(161, 155, 155);
+  box-shadow: 10px 10px 5px lightgray;
+}
+
+#login {
+margin-left: 375px !important;
+font-size: 20px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  form.signup,
+  form.login {
+    margin-top: 50px;
+  }
+
+ 
+  #main-name{
+    font-family: 'Righteous', cursive;
+    text-align: center !important;
+    margin-left: 330px;
+    margin-top: 10px !important;
+    font-size: 85px;
+    color: teal;
+    text-shadow: 2px 2px white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+  }
+  
+  #navbarBasicExample{
+    background-color: peachpuff !important;
+  }
+  
+  .sign-form {
+  font-family: 'Righteous', cursive;
+    text-align: center;
+    margin-top: 75px;
+    font-size: 50px;
+    color: teal;
+    margin-bottom: 80px;
+  }
+
+#email, #username{
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Righteous', cursive;
+  color: gray;
+}
+
+#email-input, #username-input {
+  width: 600px !important;
+  margin-left: 200px;
+margin-bottom: 30px;
+border-style: solid;
+border-width: 1px;
+border-color: gray;
+}
+
+#password {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Righteous', cursive;
+  color: gray
+}
+
+#password-input {
+  width: 600px;
+  margin-left: 200px;
+  margin-bottom: 90px;
+  border-style: solid;
+border-width: 1px;
+border-color:gray;
+
+}
+
+.button {
+  margin-left: 375px;
+  margin-bottom: 20px;
+  font-family: 'Righteous', cursive;
+  font-size: 40px !important;
+  color: teal;
+  background-color: peachpuff;
+  border-radius: 4px;
+  border-style: solid;
+border-width: 1px;
+border-color: rgb(161, 155, 155);
+  box-shadow: 10px 10px 5px lightgray;
+}
+
+#login {
+margin-left: 450px !important;
+font-size: 30px;
+}
+
 }
