@@ -1,4 +1,71 @@
+@media screen and (max-width: 480px) {
 form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#main-name{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 40px;
+  color: teal;
+
+}
+
+#navbarBasicExample{
+  background-color: peachpuff;
+}
+
+#signup-container{
+  margin-left: 42%;
+ 
+}
+.sign-form{
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+  padding-top: 30px;
+}
+#email, #password{
+  font-family: 'Righteous', cursive;
+ 
+}
+.form-group{
+  padding-top: 10px;
+}
+#signbtn{
+  padding-top: 15px;
+}
+#err{
+  color: red;
+  font-size: 20px;
+}
+#welcome{
+text-align: center;
+  color: teal;
+  font-family:'Righteous', cursive; 
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.dropdown{
+  margin-left: 125px;
+  margin-top: 5px;
+}
+
+.input {
+  margin-left: 75px;
+  margin-top: 10px;
+  width: 200px;
+}
+#search{
+  display : inline-block;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  margin-top: 20px;
+}
+} 

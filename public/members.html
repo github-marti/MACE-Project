@@ -5,12 +5,76 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Righteous&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">   
+        <div id="navbarBasicExample" class="navbar-menu is-active">
+          <h5 id="main-name">Let's Talk</h5>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <!-- <div class="buttons">
+                <a class="button is-primary" href="login.html">
+                  <strong>Log out</strong>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 id="welcome">Welcome<span class="member-name"></span></h1>
+        <h2 id="welcome">{{username}}</h2>
+      </div>
+    </div>
+    <div class="dropdown">
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span id="toLanguage">Pick a language</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="toLanguage" role="menu">
+            <div class="dropdown-content">
+                <a href="#" class="dropdown-item" >es</a>
+                <a href="#" class="dropdown-item" >de</a>
+                <a href="#" class="dropdown-item" >fr</a>
+            </div>
+        </div>
+    
+      </div>
+  <div>
+    
+        <input class="input" type="text" placeholder="Search word" id="word">
+        <button id="search"><i class="fas fa-search"></i></button>
+
+  </div>
+  <div id="translate">
+      <p>translate</p>
+  </div>
+  <div id="definition">
+      <p>definition</p>
+  </div>
+  <div id="expressions">
+      <p>expressions</p>
+  </div>
+   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/logout">
@@ -19,16 +83,15 @@
     </div>
   </div>
 </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
-      </div>
-    </div>
-  </div>
+  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
+  <script>var dropdown = document.querySelector('.dropdown');
+      dropdown.addEventListener('click', function(event) {
+       event.stopPropagation();
+       dropdown.classList.toggle('is-active');
+      });</script>
 
 </body>
 
