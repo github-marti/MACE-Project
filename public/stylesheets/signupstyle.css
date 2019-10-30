@@ -28,7 +28,7 @@
       color: teal;
     }
 
-#email{
+#email, #username{
     font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
@@ -36,7 +36,7 @@
     color: gray;
 }
 
-#email-input {
+#email-input, #username-input {
     width: 300px !important;
     margin-left: 30px;
 margin-bottom: 30px;
