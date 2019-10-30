@@ -1,6 +1,3 @@
-$('#dropdown-menu3').append(new Option('spanish', 'french', 'german',true, true,true));
-
-
 $(document).ready(function() {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -14,11 +11,12 @@ $(document).ready(function() {
   $(".dropdown-item").on("click", function(event){
     event.preventDefault();
     $("#toLanguage").text($(this).text());
+    $("#toLanguage").attr("lang-id", $(this).attr("lang-id"));
   });
 
   $("#search").on("click", function () {
     let fromLanguage = "en";
-    let toLanguage = $("#toLanguage").text();
+    let toLanguage = $("#toLanguage").attr("lang-id");
     let wordSearch = $("#word").val();
 
     $("#translate").html("");

@@ -1,12 +1,11 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
-  var submitButton = $(".submitButton");
+  var submitButton = $("#submit-btn");
   var usernameInput = $("input#username");
   var passwordInput = $("input#password");
 
   // When the form is submitted, we validate there's an email and password entered
-  submitButton.on("submit", function(event) {
-    event.preventDefault();
+  submitButton.on("click", function(event) {
     var userData = {
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim()
@@ -29,6 +28,7 @@ $(document).ready(function() {
       password: password
     })
       .then(function() {
+        console.log("window replacement");
         window.location.replace("/members");
         // If there's an error, log the error
       })
