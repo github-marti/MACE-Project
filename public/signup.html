@@ -7,37 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Anton|Righteous&display=swap" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/signupstyle.css">
 </head>
 
 <body>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">   
-        <div id="navbarBasicExample" class="navbar-menu">
-          <h3 id="main-name">Let's Talk</h3>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary" href="login.html">
-                  <strong>Log in</strong>
-                </a>
-              </div>
-            </div>
-          </div>
+  <nav class="navbar" role="navigation" aria-label="main navigation">   
+    <div id="navbarBasicExample" class="navbar-menu is-active">
+      <h5 id="main-name">Let's Talk...</h5>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <!-- <div class="buttons">
+            <a class="button is-primary" href="login.html">
+              <strong>Log out</strong>
+            </a>
+          </div> -->
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
   <div class="container" id="signup-container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2 class="sign-form">Sign Up Form</h2>
+        <h2 class="sign-form">Sign Up And Start Learning!</h2>
         <form class="signup">
           <div class="form-group">
-            <label for="exampleInputEmail1" id="email">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+            <div for="exampleInputEmail1" id="email">Email address</div>
+            <input type="email" class="form-control input is-medium" id="email-input" placeholder="johndoe@email.com">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1" id="password">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+            <div for="exampleInputPassword1" id="password">Password</div>
+            <input type="password" class="form-control input is-medium" id="password-input">
           </div>
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -45,7 +45,7 @@
           </div>
           <div class="field" id="signbtn">
               <p class="control">
-                <button class="button is-success">
+                <button class="button">
                   Sign up
                 </button>
               </p>
