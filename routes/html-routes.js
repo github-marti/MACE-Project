@@ -42,15 +42,16 @@ module.exports = function (app) {
         }
       ]
     });
-
+    
     let languageData = await db.Language.findAll();
+    
     let hbsObject = {
       vocabLists: vocabListData,
       languages: languageData,
       username: vocabListData[0].dataValues.User.dataValues.username,
-      userId: vocabListData[0].dataValues.User.dataValues.id
+      userId: vocabListData[0].dataValues.User.dataValues.id,
     }
     res.render("members", hbsObject);
   });
-
+  
 };

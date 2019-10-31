@@ -10,6 +10,10 @@ module.exports = function (sequelize, DataTypes) {
                 }
             }
         },
+        nativelanguage : {
+            type: DataTypes.STRING,
+            allowNull : false,
+        },
         translatedword: {
             type: DataTypes.STRING,
             allowNull: false,

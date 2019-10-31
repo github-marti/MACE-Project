@@ -13,12 +13,13 @@ module.exports = function(app) {
         console.log("req", req.body);
         db.Vocab.create({
             nativeword: req.body.nativeword,
+            nativelanguage : req.body.nativelanguage,
             translatedword: req.body.translatedword,
             createdAt: new Date(),
             updatedAt: new Date(),
             UserId: req.body.UserId,
             LanguageId: req.body.LanguageId,
-            VocabListId: req.body.VocabListId,
+            VocabListId: req.body.VocabListId
         })
         .then(results => {
             res.json(results);
