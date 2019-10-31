@@ -1,50 +1,11 @@
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <h5 id="main-name" class="navbar-item">Let's Talk</h5>
-    </a>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-      data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Lists
-        </a>
-        <div class="navbar-dropdown">
-          {{#each vocabLists}}
-          <a class="navbar-item">
-            {{name}}
-          </a>
-          {{/each}}
-        </div>
-      </div>
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Log out</strong>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-<div class="container">
-  <!-- welcome banner -->
-  <div class="row">
+<!-- welcome banner -->
+  <!-- <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1 id="welcome">Welcome <span class="member-username" user-id={{userId}}>{{username}}</span>!</h1>
     </div>
-  </div>
+  </div> -->
   <!-- search bar -->
-  <div class="search-container">
+  <!-- <div class="search-container">
     From:
     <div class="dropdown" id="from-button">
       <div class="dropdown-trigger">
@@ -74,106 +35,4 @@
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
         </button> -->
-      <!-- </div>
-      <div class="dropdown-menu" id="toLanguage" role="menu">
-        <div class="dropdown-content">
-          <a href="#" class="dropdown-item to-option" lang-code="en" lang-id="1">English</a>
-          <a href="#" class="dropdown-item to-option" lang-code="id" lang-id="2">Indonesian</a>
-          <a href="#" class="dropdown-item to-option" lang-code="es" lang-id="3">Spanish</a>
-          <a href="#" class="dropdown-item to-option" lang-code="de" lang-id="4">German</a>
-          <a href="#" class="dropdown-item to-option" lang-code="fr" lang-id="5">French</a>
-        </div>
-      </div>
-    </div>
-    <div class="search-bar">
-      <input class="input" type="text" placeholder="Search word" id="word">
-      <i id="search" class="fas fa-search"></i>
-    </div>
-    <div class="results-container">
-      <i id="save-btn" class="fas fa-star"></i>
-      <h1 class="title is-4">Results</h1>
-      <div id="translate" class="results-chunk">
-      </div>
-      <div id="definition" class="results-chunk">
-      </div>
-      <div id="expressions" class="results-chunk">
-      </div>
-    </div>
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Save <span id="word-to-save"></span></p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-          <div class="list-save-option">
-            <p>Save word to a pre-existing list:</p>
-            <div class="dropdown" id="save-to-list-button">
-              <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <span id="target-list">Pick a list</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="list-options" role="menu">
-                <div class="dropdown-content">
-                  {{#each vocabLists}}
-                  <a href="#" class="dropdown-item list-option" lang-id="en">{{name}}</a>
-                  {{/each}}
-                </div>
-              </div>
-            </div>
-            <button class="button is-success" id="existing-list-save">Save changes</button>
-          </div>
-          <div class="list-save-option">
-            <p>Create a new list</p>
-            <input type="text" id="new-vocab-list">
-            <button class="button is-success" id="new-list-save">Save to new list</button>
-          </div>
-        </section>
-        <footer class="modal-card-foot">
-          <button class="button">Cancel</button>
-        </footer>
-      </div>
-    </div>
-  </div>
-  <h1 class="title">Lists</h1>
-  <div class="list-container">
-    {{#each vocabLists}}
-    <div class="vocab-list">
-      <h1 class="subtitle">{{name}}</h1>
-      {{#each Vocabs}}
-      <div class="word-container">
-        <p>
-          {{dataValues.translatedword}}
-        </p>
-        <p>
-          Native Word: {{dataValues.nativeword}}
-        </p>
-      </div>
-      {{/each}}
-    </div>
-    {{/each}}
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
-  <script>
-    var fromButton = document.getElementById('from-button');
-    fromButton.addEventListener('click', function (event) {
-      event.stopPropagation();
-      fromButton.classList.toggle('is-active');
-    });
-    var toButton = document.getElementById('to-button');
-    toButton.addEventListener('click', function (event) {
-      event.stopPropagation();
-      toButton.classList.toggle('is-active');
-    });
-    var saveToListButton = document.getElementById('save-to-list-button');
-    saveToListButton.addEventListener('click', function (event) {
-      event.stopPropagation();
-      saveToListButton.classList.toggle('is-active');
-    })
-  </script> -->
+    -->
