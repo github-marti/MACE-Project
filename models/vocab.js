@@ -43,12 +43,6 @@ module.exports = function (sequelize, DataTypes) {
             }
         });
 
-        Vocab.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-
     };
 
     return Vocab;

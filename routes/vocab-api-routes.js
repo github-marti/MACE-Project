@@ -10,13 +10,15 @@ module.exports = function(app) {
     });
 
     app.post("/vocab/:vocab/", function(req, res) {
+        console.log("req", req.body);
         db.Vocab.create({
-            word: req.params.vocab,
-            LanguageId: req.body.LanguageId,
-            UserId: req.body.UserId,
-            VocabListId: req.body.ListId,
+            nativeword: req.body.nativeword,
+            translatedword: req.body.translatedword,
             createdAt: new Date(),
-            updatedAt: new Date()
+            updatedAt: new Date(),
+            UserId: req.body.UserId,
+            LanguageId: req.body.LanguageId,
+            VocabListId: req.body.VocabListId,
         })
         .then(results => {
             res.json(results);

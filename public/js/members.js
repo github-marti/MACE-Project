@@ -12,7 +12,7 @@ $(document).ready(function () {
     let nativeWord = $("#word").val();
     let newLang = $("#toLanguage").attr("lang-id");
     let newDifficulty = $("#difficulty").val();
-    let vocabListId = $("#target-list").attr("lang-id");
+    let vocabListId = $("#target-list").attr("list-id");
 
     let newVocab = {
       nativeword: nativeWord,
@@ -86,7 +86,7 @@ $(document).ready(function () {
   $(".list-option").on('click', function (event) {
     event.preventDefault();
     $("#target-list").text($(this).text());
-    $("#target-list").attr("lang-id", $(this).attr("lang-id"));
+    $("#target-list").attr("list-id", $(this).attr("list-id"));
   })
 
   $("#search").on("click", function () {
