@@ -4,19 +4,50 @@ form.login {
   margin-top: 50px;
 }
 
+body {
+  position: relative
+}
+​
+.container {
+  text-align: center;
+}
+​
+.navbar-burger {
+  font-size: 2em;
+  height: 100px
+}
+​
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+​
 #main-name{
   font-family: 'Righteous', cursive;
   text-align: center;
   margin-left: 0px;
   font-size: 40px;
   color: teal;
-
+  background: peachpuff
 }
-
+​
 #navbarBasicExample{
   background-color: peachpuff;
 }
-
+​
+.navbar-brand {
+  background-color: peachpuff;
+}
+​
+.navbar-dropdown {
+  padding: 0;
+}
+​
+.navbar-dropdown a {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+​
 #signup-container{
   margin-left: 42%;
  
@@ -40,49 +71,110 @@ form.login {
   color: red;
   font-size: 20px;
 }
+​
 #welcome{
 text-align: center;
   color: teal;
   font-family:'Righteous', cursive; 
   margin-top: 5px;
-  font-size: 25px;
-  margin-bottom: 0px;
+  font-size: 2em;
+  margin: 20px 0;
 }
-.dropdown{
-  margin-left: 125px;
-  margin-top: 5px;
+​
+.modal {
+  border: 2px solid slategray;
 }
-
-.input {
-  margin-left: 75px;
-  margin-top: 10px;
-  width: 200px;
+​
+.modal-card-body {
+  min-height: 300px;
 }
-#search{
-  display : inline-block;
+​
+.list-save-option {
+  margin: 30px 0;
+}
+​
+#new-vocab-list {
+  display: block;
+  height: 40px;
+  margin: 10px auto;
+  width: 80%;
+}
+​
+.search-container {
+  margin-bottom: 80px;
+}
+​
+​
+.dropdown-trigger {
+  padding: 0 10px;
+}
+​
+.search-bar {
+  display: block;
+  margin: 10px auto;
+  width: 50%
+}
+​
+.search-bar input {
+  display: inline-flex;
+  width: 80%;
+}
+​
+#search {
+  display: inline-flex;
   background-color: Transparent;
   background-repeat:no-repeat;
+  margin: 10px;
   border: none;
   cursor:pointer;
   overflow: hidden;
   outline:none;
-  margin-top: 20px;
 }
-#logout{
-  float: right;
-  margin-right: 20px;
+​
+.results-container {
+  position: relative;
+  display: none;
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #bbe7e7;
+  border-radius: 4px;
 }
-#login{
-  margin-left: 150px;
+​
+.results-chunk {
+  margin: 20px 0;
 }
-#result{
-  text-align: center;
+​
+#translation {
+  font-size: 2em;
 }
-i:hover {
-  
-  color: red;
+​
+#save-btn {
   cursor: pointer;
-  
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2em;
+  color: hsl(61, 100%, 50%);
 }
+​
+.list-container {
+  text-align: left;
+  margin: 30px 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+​
+.vocab-list {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  margin: 0;
+}
+​
+.word-container {
+  margin: 10px 0;
+}
+
 
 }
