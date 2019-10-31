@@ -13,9 +13,11 @@ $(document).ready(function () {
     let newLang = $("#toLanguage").attr("lang-id");
     let newDifficulty = $("#difficulty").val();
     let vocabListId = $("#target-list").attr("list-id");
+    let nativelanguage = $("#fromLanguage").text();
 
     let newVocab = {
       nativeword: nativeWord,
+      nativelanguage : nativelanguage,
       translatedword: newWord,
       difficulty: newDifficulty,
       LanguageId: newLang,
@@ -34,18 +36,21 @@ $(document).ready(function () {
     let newLang = $("#toLanguage").attr("lang-id");
     let newDifficulty = $("#difficulty").val();
     let newVocabList = $("#new-vocab-list").val();
+    let nativelanguage = $("#fromLanguage").text();
     let userData = {
       UserId: userId
     };
     
     console.log('newVocabList', newVocabList)
     console.log('nativeWord', nativeWord)
+    console.log('nativelanguage', nativelanguage);
 
     $.post(`/vocablist/${newVocabList}`, userData, function(data) {
       console.log(data.id);
 
       let newVocab = {
         nativeword: nativeWord,
+        nativelanguage : nativelanguage,
         translatedword: newWord,
         difficulty: newDifficulty,
         LanguageId: newLang,
