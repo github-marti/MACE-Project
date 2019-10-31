@@ -19,10 +19,11 @@ form.login {
 #main-name{
   font-family: 'Righteous', cursive;
   text-align: center;
-  margin-left: 0px;
-  font-size: 40px;
+  margin-left: 80px;
+  font-size: 45px;
   color: teal;
-  background: peachpuff
+  background: peachpuff;
+  text-shadow: 2px 2px white;
 }
 
 #navbarBasicExample{
@@ -106,7 +107,8 @@ text-align: center;
 .search-bar {
   display: block;
   margin: 10px auto;
-  width: 50%
+  width: 50%;
+  margin-top: 20px;
 }
 
 .search-bar input {
@@ -157,6 +159,9 @@ text-align: center;
   margin: 30px 0;
   width: 100%;
   border-top: 1px solid #ddd;
+  background-color:teal;
+  position: relative;
+    bottom: 69px;
 }
 
 .vocab-list {
@@ -164,8 +169,93 @@ text-align: center;
   border-bottom: 1px solid #ddd;
   padding: 20px;
   margin: 0;
+  color: white;
 }
 
 .word-container {
   margin: 10px 0;
+  font-style: oblique;
+}
+
+.dropdown {
+  display: block;
+}
+
+#fromLanguage, #toLanguage {
+  font: 14px;
+}
+
+.title {
+  font-family: 'Righteous', cursive;
+  background-color: rgb(212, 202, 202);
+  display: block;
+  text-transform: uppercase;
+  font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    bottom: 40px;
+    text-shadow: 2px 2px white;
+}
+
+.subtitle {
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #main-name{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    margin-left: 230px;
+    margin-top: 10px !important;
+    font-size: 60px;
+    color: teal;
+    text-shadow: 2px 2px white;
+  
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #main-name{
+    font-family: 'Righteous', cursive;
+    text-align: center !important;
+    margin-left: 330px;
+    margin-top: 10px !important;
+    font-size: 85px;
+    color: teal;
+    text-shadow: 2px 2px white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .vocab-list {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+
+  #welcome{
+    font-size: 3em;
+  }
+
+  .title {
+    position: relative;
+    bottom: -28px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .list-container {
+    position: relative;
+    bottom: 0px;
+  }
 }
