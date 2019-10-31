@@ -169,3 +169,24 @@ text-align: center;
 .word-container {
   margin: 10px 0;
 }
+
+.choose-difficulty {
+  margin-top: 20px;
+}
+
+.choose-difficulty label {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#easy {
+  background: rgb(43, 202, 128);
+}
+
+#medium {
+  background: rgb(255, 236, 127);
+}
+
+#hard {
+  background: rgb(255, 103, 103);
+}

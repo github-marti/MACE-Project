@@ -40,7 +40,10 @@ module.exports = function (app) {
         {
           model: db.User,
         }
-      ]
+      ],
+      where: {
+        UserId: req.user.id
+      }
     });
 
     let languageData = await db.Language.findAll();
