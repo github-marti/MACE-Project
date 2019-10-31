@@ -20,8 +20,17 @@ module.exports = function(app) {
       username: req.body.username,
       password: req.body.password
     })
-      .then(function() {
-        res.redirect(307, "/api/login");
+      .then(function(results) {
+        console.log(results);
+        db.VocabList.create({
+          name: "Default",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          UserId: results.dataValues.id
+        })
+        .then(function() {
+          res.redirect(307, "/api/login");
+        })
       })
       .catch(function(err) {
         res.status(401).json(err);

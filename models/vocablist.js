@@ -10,6 +10,12 @@ module.exports = function(sequelize, DataTypes) {
         VocabList.hasMany(models.Vocab, {
             onDelete: "cascade"
         });
+
+        VocabList.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
     };
 
   return VocabList;
