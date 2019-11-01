@@ -117,15 +117,15 @@
           <div class="choose-difficulty">
             <p>Set a difficulty for this word (optional)</p>
             <label id="easy" class="radio">
-              <input type="radio" name="answer">
+              <input type="radio" name="answer"  data-value = "1">
               Easy
             </label>
-            <label id="medium" class="radio">
-              <input type="radio" name="answer">
+            <label id="medium" class="radio" >
+              <input type="radio" name="answer" data-value = "2">
               Medium
             </label>
             <label id="hard" class="radio">
-              <input type="radio" name="answer">
+              <input type="radio" name="answer" data-value = "3">
               Hard
             </label>
           </div>
@@ -177,8 +177,25 @@
           {{dataValues.translatedword}}
         </p>
         <p>
-          Native Word: {{dataValues.nativeword}}
+          {{danodetaValues.nativelanguage}} => {{dataValues.nativeword}}
         </p>
+        <button class = "deletebtn" id = {{dataValues.id}}>Delete</button>
+        
+        <hr>
+        <div>
+          <label id="easy" class="radio" >
+          <input type="radio" name="update" data-value = "1">
+          Easy
+        </label>
+        <label id="medium" class="radio" >
+          <input type="radio" name="update"data-value = "2">
+          Medium
+        </label>
+        <label id="hard" class="radio" >
+          <input type="radio" name="update"data-value = "3">
+          Hard
+        </div>
+        <button class="updatebtn" id = {{dataValues.id}}>update</button>
       </div>
       {{/each}}
     </div>
