@@ -16,7 +16,7 @@ $(document).ready(function () {
     let id = $(this).attr("id");
     let difficulty = $("input[type=radio][name=update]:checked").attr("data-value");
     // alert("button id" + id);
-    // alert("button diff" + difficutly);
+    // alert("button diff" + difficulty);
     idandnewdiff = {
       id: id,
       difficulty: difficulty
@@ -43,24 +43,25 @@ $(document).ready(function () {
     let newWord = $("#translated-word").text();
     let nativeWord = $("#word").val();
     let newLang = $("#toLanguage").attr("lang-id");
-    let newDifficulty = $("#difficulty").val();
     let vocabListId = $("#target-list").attr("list-id");
     let nativelanguage = $("#fromLanguage").text();
-    let difficutly = $("input[type=radio][name=answer]:checked").attr("data-value");
+    let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
 
 
     let newVocab = {
       nativeword: nativeWord,
       nativelanguage: nativelanguage,
       translatedword: newWord,
-      difficulty: difficutly,
+      difficulty: difficulty,
       LanguageId: newLang,
       VocabListId: vocabListId
     };
 
     $.post(`/vocab/${newWord}`, newVocab, function (data) {
       console.log("Word successfully saved");
-    })
+    });
+
+    location.reload();
   })
 
   $("#new-list-save").on("click", function () {
@@ -68,10 +69,9 @@ $(document).ready(function () {
     let newWord = $("#translated-word").text();
     let nativeWord = $("#word").val();
     let newLang = $("#toLanguage").attr("lang-id");
-    let newDifficulty = $("#difficulty").val();
     let newVocabList = $("#new-vocab-list").val();
     let nativelanguage = $("#fromLanguage").text();
-    let difficutly = $("input[type=radio][name=answer]:checked").attr("data-value");
+    let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
     let userData = {
       UserId: userId
     };
@@ -87,7 +87,7 @@ $(document).ready(function () {
         nativeword: nativeWord,
         nativelanguage: nativelanguage,
         translatedword: newWord,
-        difficulty: difficutly,
+        difficulty: difficulty,
         LanguageId: newLang,
         VocabListId: data.id
       };
@@ -97,7 +97,7 @@ $(document).ready(function () {
         console.log("Word successfully saved!");
       });
     })
-
+    location.reload();
   })
 
   $(".delete").on("click", function () {
