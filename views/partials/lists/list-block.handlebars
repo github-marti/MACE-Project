@@ -1,0 +1,11 @@
+<h1 class="title">Lists</h1>
+<div class="list-container">
+  {{#each vocabLists}}
+  <div class="vocab-list">
+    <h1 class="subtitle">{{name}}</h1>
+    {{#each Vocabs}}
+      {{>vocabs/vocab-block}}
+    {{/each}}
+  </div>
+  {{/each}}
+</div>

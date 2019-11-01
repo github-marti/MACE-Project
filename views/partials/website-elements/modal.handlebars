@@ -1,0 +1,45 @@
+<div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Save <span id="word-to-save"></span></p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="choose-difficulty">
+                <p>Set a difficulty for this word (optional)</p>
+                {{>vocabs/difficulty}}
+            </div>
+            <div class="list-save-option">
+                <p>Save word to a pre-existing list:</p>
+                <div class="dropdown" id="save-to-list-button">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                            <span id="target-list">Pick a list</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="list-options" role="menu">
+                        <div class="dropdown-content">
+                            {{#each vocabLists}}
+                            <a href="#" class="dropdown-item list-option" list-id={{id}}>{{name}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <button class="button is-success" id="existing-list-save">Save changes</button>
+            </div>
+
+            <div class="list-save-option">
+                <p>Create a new list</p>
+                <input type="text" id="new-vocab-list">
+                <button class="button is-success" id="new-list-save">Save to new list</button>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button">Cancel</button>
+        </footer>
+    </div>
+</div>

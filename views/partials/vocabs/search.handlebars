@@ -1,0 +1,43 @@
+<div class="search-container">
+    From:
+    <div class="dropdown" id="from-button">
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span id="fromLanguage">Pick a language</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="fromLanguage" role="menu">
+            <div class="dropdown-content">
+                {{#each languages}}
+                <a href="#" class="dropdown-item from-option" lang-code={{code}} lang-id={{id}}>{{name}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    To:
+    <div class="dropdown" id="to-button">
+        <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span id="toLanguage">Pick a language</span>
+                <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="toLanguage" role="menu">
+            <div class="dropdown-content">
+                {{#each languages}}
+                <a href="#" class="dropdown-item to-option" lang-code={{code}} lang-id={{id}}>{{name}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input class="input" type="text" placeholder="Search word" id="word">
+        <i id="search" class="fas fa-search"></i>
+    </div>

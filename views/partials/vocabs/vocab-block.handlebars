@@ -1,12 +1,15 @@
-    <div id="result">
-        <i class="fas fa-star" id="saveicon"></i>
-      <div id="translate">
-          <p>translate: {{translate}}</p>
-      </div>
-      <div id="definition">
-          <p>definition: {{definition}}</p>
-      </div>
-      <div id="expressions">
-          <p>expressions: {{expressions}}</p>
-      </div>
-   </div> 
+<div class="word-container">
+    <p class="main-word">
+        <span id="difficulty-{{dataValues.difficulty}}">{{dataValues.translatedword}}</span>
+    </p>
+    <p>
+        {{dataValues.nativelanguage}} => {{dataValues.nativeword}}
+    </p>
+    <button class="deletebtn" id={{dataValues.id}}>Delete</button>
+
+    <hr>
+    <div class="choose-difficulty">
+        {{>vocabs/difficulty}}
+    </div>
+    <button class="updatebtn" id={{dataValues.id}}>update</button>
+</div>
