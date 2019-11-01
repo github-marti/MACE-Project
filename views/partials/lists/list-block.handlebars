@@ -1,0 +1,22 @@
+<h1 class="title">Lists</h1>
+<div class="list-container">
+  {{#each vocabLists}}
+  <div class="vocab-list">
+    <h1 class="subtitle">{{name}}</h1>
+    {{#each Vocabs}}
+    {{>vocabs/vocab-block}}
+    {{/each}}
+  </div>
+  {{/each}}
+
+  {{!-- List for Update/Delete --}}
+  Vocab Lists
+  {{#each vocabLists}}
+  <p>{{id}}</p>
+  <p>{{name}}</p> <button class="listdeletebutton" data-value={{id}}>Delete</button><br>
+  <input id={{id}} class="updateinput{{id}}"></input>
+  <button class="listupdatebutton" data-value={{id}}>Update</button>
+  {{/each}}
+  {{!-- end of List for Update.Delete --}}
+
+</div>
