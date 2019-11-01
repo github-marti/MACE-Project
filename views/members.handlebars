@@ -200,6 +200,17 @@
       {{/each}}
     </div>
     {{/each}}
+
+  {{!-- List for Update/Delete --}}
+  Vocab Lists
+  {{#each vocabLists}}
+  <p>{{id}}</p>
+  <p>{{name}}</p> <button class = "listdeletebutton" data-value = {{id}}>Delete</button><br>
+  <input id = {{id}} class = "updateinput{{id}}"></input>
+  <button class = "listupdatebutton" data-value = {{id}}>Update</button>
+  {{/each}}
+  {{!-- end of List for Update.Delete --}}
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
