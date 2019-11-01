@@ -174,19 +174,25 @@ text-align: center;
   margin-top: 20px;
 }
 
-.choose-difficulty label {
+
+#difficulty-1 {
+  background: rgb(43, 202, 128);
   padding: 10px;
   border-radius: 4px;
 }
 
-#easy {
-  background: rgb(43, 202, 128);
-}
-
-#medium {
+#difficulty-2 {
   background: rgb(255, 236, 127);
+  padding: 10px;
+  border-radius: 4px;
 }
 
-#hard {
+#difficulty-3 {
   background: rgb(255, 103, 103);
+  padding: 10px;
+  border-radius: 4px;
 } 
+
+.main-word {
+  margin: 15px 0;
+}

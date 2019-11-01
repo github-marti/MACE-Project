@@ -28,7 +28,8 @@ $(document).ready(function () {
       url: "/api/updatevocabdiff",
       data: idandnewdiff
     }).then(function (res) {
-      console.log(res)
+      console.log(res);
+      location.reload();
     })
   })
 
