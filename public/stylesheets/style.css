@@ -164,7 +164,6 @@ text-align: center;
   margin: 30px 0;
   width: 100%;
   border-top: 1px solid #ddd;
-  background-color: teal;
   position: relative;
   bottom: 78px;
 }
@@ -174,14 +173,18 @@ text-align: center;
   border-bottom: 1px solid #ddd;
   padding: 20px;
   margin: 0;
+  border: 1px solid lightgray;
 }
 
 .word-container {
   margin: 10px 0;
-  color: white;
+  color: black;
   font-style: oblique;
   font-size: 20px;
   text-align: center;
+  background-color: rgb(222, 228, 228);
+  border: 1px solid teal;
+  padding-bottom: 10px;
 }
 
 .choose-difficulty {
@@ -212,25 +215,26 @@ text-align: center;
 
 .title {
   font-family: 'Righteous', cursive;
-  background-color: lightgray;
+  background-color: teal;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.125;
   padding-top: 10px;
   padding-bottom: 10px;
   position: relative;
-  bottom: 50px;
+  bottom: 47px;
+  color: white;
 }
 
+
 .subtitle {
-  color: white;
+  color: teal;
   text-transform: uppercase;
   font-size: 1.15rem;
   font-family: 'Righteous', cursive;
   line-height: 0;
   margin-bottom: 15px !important;
   text-align: center;
-  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px -0.5px 0 #000, .5px .5px 0 #000;
 }
 
 .radio {
@@ -239,7 +243,7 @@ text-align: center;
   border: .5px solid silver;
   margin-left: 6px;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Righteous', cursive;
   font-style: normal;
 }
 
@@ -253,10 +257,13 @@ text-align: center;
 .deletebtn {
   font-size: 14px;
     font-family: 'Righteous', cursive;
-  padding: 10px;
+    padding: 3px;
   border-radius: 4px;
 } 
 
 .main-word {
-  margin: 15px 0;
+  margin: 20px 0;
+  font-weight: bold;
+  padding: 5px;
+  
 }
