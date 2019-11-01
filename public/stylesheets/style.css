@@ -1,3 +1,4 @@
+
 body {
   position: relative
 }
@@ -8,22 +9,27 @@ body {
 
 .navbar-burger {
   font-size: 2em;
-  height: 100px
-}
-
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-
-#main-name{
-  font-family: 'Righteous', cursive;
-  text-align: center;
-  margin-left: 0px;
-  font-size: 40px;
+  height: 100px;
   color: teal;
-  background: peachpuff
+  border-color: solid 1px teal;
 }
+
+
+  form.signup,
+  form.login {
+    margin-top: 50px;
+  }
+
+ 
+  #main-name{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    margin-left: 65px;
+    margin-top: 10px !important;
+    font-size: 45px;
+    color: teal;
+    text-shadow: 2px 2px white;
+  }
 
 #navbarBasicExample{
   background-color: peachpuff;
@@ -71,8 +77,9 @@ text-align: center;
   color: teal;
   font-family:'Righteous', cursive; 
   margin-top: 5px;
-  font-size: 2em;
-  margin: 20px 0;
+  font-size: 2.25em;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px rgb(250, 248, 248);
 }
 
 .modal {
@@ -157,6 +164,9 @@ text-align: center;
   margin: 30px 0;
   width: 100%;
   border-top: 1px solid #ddd;
+  background-color: teal;
+  position: relative;
+  bottom: 78px;
 }
 
 .vocab-list {
@@ -168,6 +178,10 @@ text-align: center;
 
 .word-container {
   margin: 10px 0;
+  color: white;
+  font-style: oblique;
+  font-size: 20px;
+  text-align: center;
 }
 
 .choose-difficulty {
@@ -189,6 +203,56 @@ text-align: center;
 
 #difficulty-3 {
   background: rgb(255, 103, 103);
+} 
+
+.dropdown {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Righteous', cursive;
+  background-color: lightgray;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.125;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 50px;
+}
+
+.subtitle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-family: 'Righteous', cursive;
+  line-height: 0;
+  margin-bottom: 15px !important;
+  text-align: center;
+  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px -0.5px 0 #000, .5px .5px 0 #000;
+}
+
+.radio {
+  font-size: 16px;
+  padding: 5px;
+  border: .5px solid silver;
+  margin-left: 6px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.updatebtn {
+  margin-top: 20px;
+  margin-left: 8px;
+  font-size: 14px;
+  font-family: 'Righteous', cursive;
+}
+
+.deletebtn {
+  font-size: 14px;
+    font-family: 'Righteous', cursive;
   padding: 10px;
   border-radius: 4px;
 } 
