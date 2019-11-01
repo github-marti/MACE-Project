@@ -15,6 +15,7 @@ module.exports = function(app) {
             nativeword: req.body.nativeword,
             nativelanguage : req.body.nativelanguage,
             translatedword: req.body.translatedword,
+            difficulty : req.body.difficulty,
             createdAt: new Date(),
             updatedAt: new Date(),
             UserId: req.body.UserId,
@@ -25,4 +26,24 @@ module.exports = function(app) {
             res.json(results);
         });
     });
+
+    app.delete("/api/vocabs/:id", function(req,res){
+        db.Vocab.destroy ({
+            where: {id : req.params.id}
+        }).then(function(results) {
+            res.json(results);
+        })
+    })
+
+    app.put("/api/updatevocabdiff", function(req, res){
+        console.log(req.body)
+        db.Vocab.update(req.body,
+            {
+                where : {
+                    id : req.body.id
+                }
+            }).then(function(results){
+                res.json(results);
+            })
+    })
 };

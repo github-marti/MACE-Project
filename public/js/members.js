@@ -1,5 +1,37 @@
 $(document).ready(function () {
 
+  $(".deletebtn").on("click", function () {
+    // alert($(this).attr("id"))
+    let id = $(this).attr("id");
+    $.ajax("/api/vocabs/" + id,
+      {
+        method: "DELETE",
+
+      }).then(function () {
+        location.reload();
+      })
+  })
+
+  $(".updatebtn").on("click", function () {
+    let id = $(this).attr("id");
+    let difficulty = $("input[type=radio][name=update]:checked").attr("data-value");
+    // alert("button id" + id);
+    // alert("button diff" + difficutly);
+    idandnewdiff = {
+      id: id,
+      difficulty: difficulty
+    };
+    // alert(idandnewdiff.id);
+    // alert(idandnewdiff.difficulty);
+    $.ajax({
+      method: "PUT",
+      url: "/api/updatevocabdiff",
+      data: idandnewdiff
+    }).then(function (res) {
+      console.log(res)
+    })
+  })
+
   $("#save-btn").on("click", function () {
     let newWord = $("#translated-word").text();
 
@@ -7,19 +39,21 @@ $(document).ready(function () {
     $("#word-to-save").text(newWord)
   });
 
-  $("#existing-list-save").on("click", function() {
+  $("#existing-list-save").on("click", function () {
     let newWord = $("#translated-word").text();
     let nativeWord = $("#word").val();
     let newLang = $("#toLanguage").attr("lang-id");
     let newDifficulty = $("#difficulty").val();
     let vocabListId = $("#target-list").attr("list-id");
     let nativelanguage = $("#fromLanguage").text();
+    let difficutly = $("input[type=radio][name=answer]:checked").attr("data-value");
+
 
     let newVocab = {
       nativeword: nativeWord,
-      nativelanguage : nativelanguage,
+      nativelanguage: nativelanguage,
       translatedword: newWord,
-      difficulty: newDifficulty,
+      difficulty: difficutly,
       LanguageId: newLang,
       VocabListId: vocabListId
     };
@@ -29,7 +63,7 @@ $(document).ready(function () {
     })
   })
 
-  $("#new-list-save").on("click", function() {
+  $("#new-list-save").on("click", function () {
     let userId = $(".member-username").attr("user-id");
     let newWord = $("#translated-word").text();
     let nativeWord = $("#word").val();
@@ -37,22 +71,23 @@ $(document).ready(function () {
     let newDifficulty = $("#difficulty").val();
     let newVocabList = $("#new-vocab-list").val();
     let nativelanguage = $("#fromLanguage").text();
+    let difficutly = $("input[type=radio][name=answer]:checked").attr("data-value");
     let userData = {
       UserId: userId
     };
-    
+
     console.log('newVocabList', newVocabList)
     console.log('nativeWord', nativeWord)
     console.log('nativelanguage', nativelanguage);
 
-    $.post(`/vocablist/${newVocabList}`, userData, function(data) {
+    $.post(`/vocablist/${newVocabList}`, userData, function (data) {
       console.log(data.id);
 
       let newVocab = {
         nativeword: nativeWord,
-        nativelanguage : nativelanguage,
+        nativelanguage: nativelanguage,
         translatedword: newWord,
-        difficulty: newDifficulty,
+        difficulty: difficutly,
         LanguageId: newLang,
         VocabListId: data.id
       };
