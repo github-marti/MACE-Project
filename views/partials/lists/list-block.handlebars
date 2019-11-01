@@ -6,21 +6,24 @@
       <h1 class="subtitle">{{name}}</h1>
     </div>
     <div class="panel word-container">
-    {{#each Vocabs}}
-    {{>vocabs/vocab-block}}
-    {{/each}}
+      {{#each Vocabs}}
+      {{>vocabs/vocab-block}}
+      {{/each}}
     </div>
   </div>
   {{/each}}
 
   {{!-- List for Update/Delete --}}
-  Vocab Lists
-  {{#each vocabLists}}
-  <p>{{id}}</p>
-  <p>{{name}}</p> <button class="listdeletebutton" data-value={{id}}>Delete</button><br>
-  <input id={{id}} class="updateinput{{id}}"></input>
-  <button class="listupdatebutton" data-value={{id}}>Update</button>
-  {{/each}}
+  <div class="list-editor">
+    <h1 class="title">Update and Delete Lists</h1>
+    {{#each vocabLists}}
+    <div class="list-block">
+    <p class="subtitle">{{name}}</p> <button class="listdeletebutton" data-value={{id}}>Delete</button><br>
+    <input id={{id}} class="updateinput{{id}}"></input>
+    <button class="listupdatebutton" data-value={{id}}>Update</button>
+    </div>
+    {{/each}}
+  </div>
   {{!-- end of List for Update.Delete --}}
 
 </div>
