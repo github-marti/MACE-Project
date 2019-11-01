@@ -50,10 +50,10 @@ $(document).ready(function () {
   })
 
   $(".updatebtn").on("click", function () {
+    
     let id = $(this).attr("id");
-    let difficulty = $("input[type=radio][name=update]:checked").attr("data-value");
-    // alert("button id" + id);
-    // alert("button diff" + difficulty);
+    let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
+    
     idandnewdiff = {
       id: id,
       difficulty: difficulty
