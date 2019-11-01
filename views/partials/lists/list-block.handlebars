@@ -2,10 +2,14 @@
 <div class="list-container">
   {{#each vocabLists}}
   <div class="vocab-list">
-    <h1 class="subtitle">{{name}}</h1>
+    <div class="accordion">
+      <h1 class="subtitle">{{name}}</h1>
+    </div>
+    <div class="panel word-container">
     {{#each Vocabs}}
     {{>vocabs/vocab-block}}
     {{/each}}
+    </div>
   </div>
   {{/each}}
 
