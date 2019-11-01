@@ -116,15 +116,15 @@
         <section class="modal-card-body">
           <div class="choose-difficulty">
             <p>Set a difficulty for this word (optional)</p>
-            <label id="easy" class="radio">
+            <label id="difficulty-1" class="radio">
               <input type="radio" name="answer"  data-value = "1">
               Easy
             </label>
-            <label id="medium" class="radio" >
+            <label id="difficulty-2" class="radio" >
               <input type="radio" name="answer" data-value = "2">
               Medium
             </label>
-            <label id="hard" class="radio">
+            <label id="difficulty-3" class="radio">
               <input type="radio" name="answer" data-value = "3">
               Hard
             </label>
@@ -173,25 +173,25 @@
       <h1 class="subtitle">{{name}}</h1>
       {{#each Vocabs}}
       <div class="word-container">
-        <p>
-          {{dataValues.translatedword}}
+        <p class="main-word">
+          <span id="difficulty-{{dataValues.difficulty}}">{{dataValues.translatedword}}</span>
         </p>
         <p>
-          {{danodetaValues.nativelanguage}} => {{dataValues.nativeword}}
+          {{dataValues.nativelanguage}} => {{dataValues.nativeword}}
         </p>
         <button class = "deletebtn" id = {{dataValues.id}}>Delete</button>
         
         <hr>
-        <div>
-          <label id="easy" class="radio" >
+        <div class="choose-difficulty">
+          <label id="difficulty-1" class="radio" >
           <input type="radio" name="update" data-value = "1">
           Easy
         </label>
-        <label id="medium" class="radio" >
+        <label id="difficulty-2" class="radio" >
           <input type="radio" name="update"data-value = "2">
           Medium
         </label>
-        <label id="hard" class="radio" >
+        <label id="difficulty-3" class="radio" >
           <input type="radio" name="update"data-value = "3">
           Hard
         </div>
