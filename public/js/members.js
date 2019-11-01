@@ -1,5 +1,42 @@
 $(document).ready(function () {
 
+  $(".listdeletebutton").on("click", function () {
+    //alert("DELETE BUTTON " + $(this).attr("data-value"));
+    let id = $(this).attr("data-value");
+
+    $.ajax("/api/vocabperlist/" + id,
+      {
+        method: "DELETE"
+      }).then(function () {
+        location.reload();
+      })
+
+    $.ajax("/api/vocablist/" + id,
+      {
+        method: "DELETE"
+      }).then(function () {
+        location.reload();
+      })
+  })
+
+  $(".listupdatebutton").on("click", function () {
+    let id = $(this).attr("data-value");
+    let name = $(".updateinput" + id).val();
+    // alert("UPDATE BUTTON " + $(this).attr("data-value") + " " + textinput);
+
+    let newobj = {
+      id: id,
+      name: name
+    };
+    $.ajax({
+      method: "PUT",
+      url: "/api/updatelistname",
+      data: newobj
+    }).then(function (res) {
+      location.reload();
+    })
+  })
+
   $(".deletebtn").on("click", function () {
     // alert($(this).attr("id"))
     let id = $(this).attr("id");

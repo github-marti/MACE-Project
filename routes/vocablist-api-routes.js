@@ -27,4 +27,21 @@ module.exports = function(app) {
             res.json(results);
         });
     });
+
+    app.delete("/api/vocablist/:id", function(req,res){
+        db.VocabList.destroy({
+            where : {id : req.params.id}
+        }).then(function(results){
+            res.json(results);
+        })
+    })
+
+    app.put("/api/updatelistname", function(req,res){
+        db.VocabList.update(req.body,
+            {
+                where : {id : req.body.id}
+            }).then(function(results){
+                res.json(results);
+            })
+    })
 };
