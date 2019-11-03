@@ -142,7 +142,7 @@ $(document).ready(function () {
     $(".modal").removeClass("is-active");
   })
   
-  $(".button").on("click", function () {
+  $("#cancel").on("click", function () {
     $(".modal").removeClass("is-active");
   })
 
