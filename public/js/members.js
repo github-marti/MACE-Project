@@ -141,6 +141,10 @@ $(document).ready(function () {
   $(".delete").on("click", function () {
     $(".modal").removeClass("is-active");
   })
+  
+  $(".button").on("click", function () {
+    $(".modal").removeClass("is-active");
+  })
 
   $(".navbar-burger").click(function () {
     $(".navbar-burger").toggleClass("is-active");
