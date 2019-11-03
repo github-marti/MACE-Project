@@ -130,6 +130,7 @@ text-align: center;
   cursor:pointer;
   overflow: hidden;
   outline:none;
+  float: right;
 }
 
 .results-container {
@@ -311,4 +312,14 @@ text-align: center;
 
 .list-block {
   margin-bottom: 30px;
+}
+
+.dropdown-menu-center {
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
+}
+#word{
+  margin-bottom: 42px;
 }
