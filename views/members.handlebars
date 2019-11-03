@@ -57,7 +57,7 @@
     console.log(hideDefaultDiv[counter].firstChild.data);
     if(hideDefaultDiv[counter].firstChild.data === "Default")
     {
-      hideDefaultDiv[counter].setAttribute("class", "HIDEME");
+      hideDefaultDiv[counter].nextElementSibling.hide();
     }
   }
 </script>
