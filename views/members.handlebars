@@ -50,4 +50,14 @@
       }
     });
   };
+
+  var hideDefaultDiv = document.getElementsByClassName("dontdeletedefault");
+
+  for(let counter = 0; counter < hideDefaultDiv.length; counter++){
+    console.log(hideDefaultDiv[counter].firstChild.data);
+    if(hideDefaultDiv[counter].firstChild.data === "Default")
+    {
+      hideDefaultDiv[counter].setAttribute("class", "HIDEME");
+    }
+  }
 </script>
