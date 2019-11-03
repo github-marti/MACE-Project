@@ -1,0 +1,32 @@
+<div class="fc-container">
+    <h1 class="fc-title">Flashcards</h1>
+
+    <p>Choose the list you would like to practice:</p>
+    {{#each vocabLists}}
+    <div class="fc-list-option" list-id="{{id}}">
+        <h1>{{name}}</h1>
+    </div>
+    {{/each}}
+    <div class="modal fc-modal" id="fc-modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title"></span></p>
+                <button id="fc-delete" class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="fc-vocab">
+                    <h1 class="fc-current-word fc-title" data-side="side-a"></h1>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button" id="previous-btn">Previous</button>
+                <button class="button" id="flip-btn">Flip</button>
+                <button class="button" id="next-btn">Next</button>
+            </footer>
+        </div>
+    </div>
+
+
+
+</div>

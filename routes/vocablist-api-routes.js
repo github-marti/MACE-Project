@@ -15,6 +15,22 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/api/vocablists/:id", function(req, res) {
+        db.VocabList.findAll({
+            include: [
+                {
+                    model: db.Vocab
+                }
+            ],
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(results => {
+            res.json(results);
+        })
+    })
+
     app.post("/vocablist/:vocablist/", function(req, res) {
         console.log(req.body);
         db.VocabList.create({

@@ -47,14 +47,49 @@ module.exports = function (app) {
     });
     
     let languageData = await db.Language.findAll();
+    console.log('vocabs[0]', vocabListData[1].dataValues.Vocabs);
     
     let hbsObject = {
       vocabLists: vocabListData,
       languages: languageData,
       username: vocabListData[0].dataValues.User.dataValues.username,
       userId: vocabListData[0].dataValues.User.dataValues.id,
+      default: true
     }
     res.render("members", hbsObject);
   });
+
+  app.get("/flashcards", async function (req, res) {
+    let vocabListData = await db.VocabList.findAll({
+      include: [
+        {
+          model: db.Vocab,
+          include: [
+            {
+              model: db.Language,
+              attributes: ['name']
+            }
+          ]
+        },
+        {
+          model: db.User,
+        }
+      ],
+      where: {
+        UserId: req.user.id
+      }
+    });
+    
+    let languageData = await db.Language.findAll();
+    
+    let hbsObject = {
+      vocabLists: vocabListData,
+      languages: languageData,
+      username: vocabListData[0].dataValues.User.dataValues.username,
+      userId: vocabListData[0].dataValues.User.dataValues.id,
+      default: false
+    }
+    res.render("members", hbsObject);
+  })
   
 };
