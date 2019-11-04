@@ -1,22 +1,14 @@
 {{> website-elements/navbar}}
 
-<div class="container">
-
-  <!-- welcome banner -->
-  {{> website-elements/welcome}}
-
-  <!-- search bar -->
-  {{>vocabs/search}}
-
-  {{>vocabs/results}}
-
-  {{>website-elements/modal}}
-</div>
-
-{{>lists/list-block}}
+{{#if default}}
+{{> website-elements/main-block}}
+{{else}}
+{{> lists/flashcard-block}}
+{{/if}}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="js/vocabList.js"></script>
 <script>
 
   var fromButton = document.getElementById('from-button');

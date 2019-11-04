@@ -323,3 +323,69 @@ text-align: center;
 #word{
   margin-bottom: 42px;
 }
+
+.fc-container {
+  text-align: center;
+}
+
+.fc-list-option {
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.fc-list-option h1 {
+  margin: 15px 0;
+  color: teal;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-family: 'Righteous', cursive;
+}
+
+.fc-list-option h1:hover {
+  background: teal;
+  color: white;
+}
+
+.fc-title {
+  margin: 15px 0;
+  color: black;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'Righteous', cursive;
+}
+
+.fc-current-translated {
+  display: none;
+}
+
+.fc-current-native {
+  display: none;
+}
+
+.active-word {
+  display: block;
+}
+
+.modal-card-body {
+  position: relative;
+}
+
+.fc-vocab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.fc-difficulty-1 {
+  background: rgb(43, 202, 128);
+}
+
+.fc-difficulty-2 {
+  background: rgb(255, 236, 127);
+}
+
+.fc-difficulty-3 {
+  background: rgb(255, 103, 103);
+}
