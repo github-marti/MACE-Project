@@ -26,37 +26,40 @@ module.exports = function (app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, async function (req, res) {
-    let vocabListData = await db.VocabList.findAll({
-      include: [
-        {
-          model: db.Vocab,
-          include: [
-            {
-              model: db.Language,
-              attributes: ['name']
-            }
-          ]
-        },
-        {
-          model: db.User,
+    try {
+      let vocabListData = await db.VocabList.findAll({
+        include: [
+          {
+            model: db.Vocab,
+            include: [
+              {
+                model: db.Language,
+                attributes: ['name']
+              }
+            ]
+          },
+          {
+            model: db.User,
+          }
+        ],
+        where: {
+          UserId: req.user.id
         }
-      ],
-      where: {
-        UserId: req.user.id
+      });
+
+      let languageData = await db.Language.findAll();
+
+      let hbsObject = {
+        vocabLists: vocabListData,
+        languages: languageData,
+        username: vocabListData[0].dataValues.User.dataValues.username,
+        userId: vocabListData[0].dataValues.User.dataValues.id,
+        default: true
       }
-    });
-
-    let languageData = await db.Language.findAll();
-    console.log('vocabs[0]', vocabListData[1].dataValues.Vocabs);
-
-    let hbsObject = {
-      vocabLists: vocabListData,
-      languages: languageData,
-      username: vocabListData[0].dataValues.User.dataValues.username,
-      userId: vocabListData[0].dataValues.User.dataValues.id,
-      default: true
+      res.render("members", hbsObject);
+    } catch (error) {
+      console.log(error);
     }
-    res.render("members", hbsObject);
   });
 
   app.get("/flashcards", async function (req, res) {
