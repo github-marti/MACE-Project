@@ -42,4 +42,11 @@
       }
     });
   };
+
+  var hideDefaultDiv = document.getElementsByClassName("dontdeletedefault");
+  for (let counter = 0; counter < hideDefaultDiv.length; counter++) {
+    if (hideDefaultDiv[counter].childNodes[1].textContent === "Default") {
+      hideDefaultDiv[counter].nextElementSibling.setAttribute("class", "hideme");
+    }
+  }
 </script>

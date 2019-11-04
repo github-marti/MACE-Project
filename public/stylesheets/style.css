@@ -389,3 +389,7 @@ text-align: center;
 .fc-difficulty-3 {
   background: rgb(255, 103, 103);
 }
+
+.hideme {
+  visibility: hidden;
+}
