@@ -8,7 +8,7 @@ module.exports = function(app) {
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     console.log("login attempted");
-    return res.json(req.user);
+    res.json(req.user);
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -29,11 +29,11 @@ module.exports = function(app) {
           UserId: results.dataValues.id
         })
         .then(function() {
-          return res.redirect(307, "/api/login");
+          res.redirect(307, "/api/login");
         })
       })
       .catch(function(err) {
-        return res.status(401).json(err);
+        res.status(401).json(err);
       });
   });
 
@@ -47,11 +47,11 @@ module.exports = function(app) {
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
-      return res.json({});
+      res.json({});
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      return res.json({
+      res.json({
         email: req.user.email,
         username: req.user.username,
         id: req.user.id
