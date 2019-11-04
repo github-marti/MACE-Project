@@ -191,7 +191,7 @@ $(document).ready(function () {
         method: "GET",
         headers: {
           "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-          "x-rapidapi-key": "b98198b437mshea0ca9221f948fdp104f05jsneed7015c919a"
+          "x-rapidapi-key": process.env.API_KEY
         }
       }).then(function (response) {
         console.log(queryURLTranslate);
