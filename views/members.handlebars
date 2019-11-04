@@ -46,12 +46,7 @@
   var hideDefaultDiv = document.getElementsByClassName("dontdeletedefault");
   for (let counter = 0; counter < hideDefaultDiv.length; counter++) {
     if (hideDefaultDiv[counter].childNodes[1].textContent === "Default") {
-      //hideDefaultDiv[counter].nextElementSibling.remove();
-
-      console.log(hideDefaultDiv[counter].nextElementSibling.children);
-      //hideDefaultDiv[counter].nextElementSibling.children[0].remove();
-      //hideDefaultDiv[counter].nextElementSibling.children[1].remove();
-      //hideDefaultDiv[counter].nextElementSibling.children[2].remove();
+      hideDefaultDiv[counter].nextElementSibling.setAttribute("class", "hideme");
     }
   }
 </script>
