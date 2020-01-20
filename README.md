@@ -3,7 +3,7 @@ Vocabulary-learning app that allows users to search for words and phrases in oth
 
 
 # Deployed Page
-https://lets-talk-vocab.herokuapp.com/members
+https://lets-talk-vocab.herokuapp.com/
 
 
 # Languages
